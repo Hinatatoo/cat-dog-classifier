@@ -1,0 +1,10 @@
+ml_env/
+*.pyc
+__pycache__/
+.vscode/
+*.h5
+*.keras
+original_data/
+cats_and_dogs_kaggle/
+*.zip
+training_log*.txt
