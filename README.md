@@ -28,7 +28,9 @@
 
 ## 🖼️ 识别效果展示
 
-![猫图片识别结果](images/demo2.png)
+| 猫图片识别 | 狗图片识别 |
+|-----------|-----------|
+| ![猫识别结果](images/demo2.png) | ![狗识别结果](images/demo3.png) |
 
 *上传你的宠物照片，AI 就能准确识别！*
 
@@ -43,108 +45,109 @@
 ### 安装步骤
 
 1. **克隆仓库**
-```bash
-git clone https://github.com/Hinatatoo/cat-dog-classifier.git
-cd cat-dog-classifier
+   ```bash
+   git clone https://github.com/Hinatatoo/cat-dog-classifier.git
+   cd cat-dog-classifier
+   ```
 
-2.创建虚拟环境（推荐）
+2. **创建虚拟环境（推荐）**
 
-bash
-python -m venv ml_env
-.\ml_env\Scripts\activate  # Windows
-source ml_env/bin/activate  # Mac/Linux
-3.安装依赖
+   ```bash
+   # Windows
+   python -m venv ml_env
+   .\ml_env\Scripts\activate
 
-bash
-pip install -r requirements.txt
-4.运行Web应用
+   # Mac/Linux  
+   python3 -m venv ml_env
+   source ml_env/bin/activate
+   ```
 
-bash
-streamlit run app.py
-浏览器会自动打开，开始识别猫狗！
 
-📁 项目结构
-text
+3. **安装依赖**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **运行Web应用**
+   ```bash
+   streamlit run app.py
+   ```
+   浏览器会自动打开，开始识别猫狗！
+
+---
+
+## 📁 项目结构
+
+```
 cat-dog-classifier/
-├── app.py                    # Streamlit Web应用
-├── build_model.py             # 基础CNN模型训练
+├── app.py # Streamlit Web应用
+├── build_model.py # 基础CNN模型训练
 ├── build_model_v3_transfer.py # 迁移学习模型训练
-├── predict.py                 # 单张图片预测
-├── test_all.py                # 批量测试
-├── organize_kaggle_data.py    # 数据整理
-├── requirements.txt           # 依赖列表
-├── .gitignore                 # Git忽略文件
-├── README.md                  # 项目说明
-└── images/                    # 截图文件夹
-    ├── demo1.png              # 主界面
-    └── demo2.png              # 猫识别结果
-💡 学习心得
+├── predict.py # 单张图片预测
+├── test_all.py # 批量测试
+├── organize_kaggle_data.py # 数据整理
+├── requirements.txt # 依赖列表
+├── .gitignore # Git忽略文件
+├── README.md # 项目说明
+└── images/ # 截图文件夹
+├── demo1.png # 主界面
+├── demo2.png # 猫识别结果
+└── demo3.png # 狗识别结果
+```
+
+---
+
+## 💡 学习心得
+
 作为机器学习零基础的新手，完成这个项目的过程中我学到了：
 
-1. 数据处理是最重要的第一步
-数据清洗比模型调参更花时间
+### 1. **数据处理是最重要的第一步**
+   - 数据清洗比模型调参更花时间
+   - 数据增强能有效提升模型泛化能力
 
-数据增强能有效提升模型泛化能力
+### 2. **迁移学习威力巨大**
+   - 从71%到97%，只用了30分钟训练
+   - 站在巨人的肩膀上，事半功倍
 
-2. 迁移学习威力巨大
-从71%到97%，只用了30分钟训练
+### 3. **不要害怕错误**
+   - 遇到的每个bug都是学习机会
+   - 403错误让我学会了手动下载数据集
+   - 字体问题让我学会了配置matplotlib
 
-站在巨人的肩膀上，事半功倍
+### 4. **先跑通再优化**
+   - 第一个CNN模型虽然只有71%，但让我理解了整个流程
+   - 有了基础再逐步优化，心理压力小很多
 
-3. 不要害怕错误
-遇到的每个bug都是学习机会
+### 5. **文档和分享很重要**
+   - 写README的过程就是在梳理知识
+   - 分享出去能得到更多反馈
 
-403错误让我学会了手动下载数据集
+---
 
-字体问题让我学会了配置matplotlib
+## 🔗 相关资源
 
-4. 先跑通再优化
-第一个CNN模型虽然只有71%，但让我理解了整个流程
+- [TensorFlow官方教程](https://www.tensorflow.org/tutorials)
+- [Kaggle猫狗数据集](https://www.kaggle.com/c/dogs-vs-cats)
+- [Streamlit文档](https://docs.streamlit.io/)
+- [MobileNetV2论文](https://arxiv.org/abs/1801.04381)
 
-有了基础再逐步优化，心理压力小很多
+---
 
-5. 文档和分享很重要
-写README的过程就是在梳理知识
+## 📄 许可证
 
-分享出去能得到更多反馈
-
-🔗 相关资源
-TensorFlow官方教程
-
-Kaggle猫狗数据集
-
-Streamlit文档
-
-MobileNetV2论文
-
-📄 许可证
 MIT License
 
-👨‍💻 作者
-Hinatatoo
+---
 
-GitHub: @Hinatatoo
+## 👨‍💻 作者
 
-项目地址: cat-dog-classifier
+**Hinatatoo**
 
-⭐ 如果你觉得这个项目有帮助
+- GitHub: [@Hinatatoo](https://github.com/Hinatatoo)
+- 项目地址: [cat-dog-classifier](https://github.com/Hinatatoo/cat-dog-classifier)
+
+---
+
+## ⭐ 如果你觉得这个项目有帮助
+
 欢迎给我一个Star！这对我很有鼓励！🌟
-
-
-
----
-
-## ✅ **图片文件名对照表**
-
-| 你在 README 中写的 | 实际对应的文件 |
-|-------------------|----------------|
-| `images/demo1.png` | 你保存的 `demo1.png` |
-| `images/demo2.png` | 你保存的 `demo2.png` |
-
----
-
-## 🚀 **现在请操作**
-
-1. **在 Git Bash 中**输入：
-   ```bash
-   notepad README.md
